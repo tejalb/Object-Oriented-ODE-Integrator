@@ -1,0 +1,15 @@
+import os
+integrators=['euler','rk4','ab2']
+time=25.0
+tstep=[0.1,0.01,0.001,0.0001,0.00001]
+
+
+for name in integrators:
+    filename=name+'_conv.out'
+    os.system('>' + filename)
+    for step in tstep:
+        nstep=time/step
+        os.system('echo -n '+str( step)  + '>>' + filename)
+        os.system('echo -ne \'\t\'' + '>>' + filename)
+        os.system('test_convergence' +' '+ name +' '+ str(step)+' '+ str(nstep) + '>>' +  filename)
+
