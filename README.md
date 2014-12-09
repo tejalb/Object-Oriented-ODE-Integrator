@@ -29,14 +29,14 @@ The general driver program ode_solve that lets you choose between
 the different equations and integration schemes. It reads commandline
 arguments in the following format:
 
-ode_solve <equation> <integrator> <timestep> <numsteps>
+ode_solve {equation} {integrator} {timestep} {numsteps}
 
 The program test_convergence does  convergence test of the different
 integrators. The parameters should be specified on the command line
 as
 
-test_convergence <integrator> <timestep> <numsteps>
+test_convergence {integrator} {timestep} {numsteps}
 
-The python script run_tests runs test_convergence for all three integrators,
+The python script "run_tests" runs test_convergence for all three integrators,
 up to time t = 25, for timesteps 0.1, 0.01, 0.001, 0.0001, 0.00001.
 
